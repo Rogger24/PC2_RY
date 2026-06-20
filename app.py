@@ -14,7 +14,7 @@ from streamlit_pdf_viewer import pdf_viewer
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 MONGODB_URI = st.secrets["MONGODB_URI"]
 COHERE_API_KEY = st.secrets["COHERE_API_KEY"]
-USER = st.secrets["app"].get("USER", "")
+USER = st.secrets.get("USER", "")
 
 if not GOOGLE_API_KEY or not MONGODB_URI:
     st.error("❌ Faltan GOOGLE_API_KEY o MONGODB_URI en secrets")
